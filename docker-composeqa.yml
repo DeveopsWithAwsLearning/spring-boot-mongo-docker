@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+ springboatapp:
+   environment:
+   - MONGO_DB_HOSTNAME=mongo
+   - MONGO_DB_USERNAME=qadb
+   - MONGO_DB_PASSWORD=qadb1234
+   environment:
+   - MONGO_INITDB_ROOT_USERNAME=qadb 
+   - MONGO_INITDB_ROOT_PASSWORD=qadb1234
+
+  
+
+
