@@ -1,0 +1,29 @@
+version: '3.3' 
+services:
+
+ springboatapp:
+   image: swamipeddineni/spring-boot-mongo:1
+   ports:
+   - 8080:8080
+
+   environment:
+   - MONGO_DB_HOSTNAME=mongo
+
+   networks:
+   - springappnetwork
+
+ mongodb:
+   image: mongo
+   volumes: 
+   - mongodb:/data/db
+
+   networks:
+   - springappnetwork
+
+volumes:
+   mongodb:
+     driver: local
+
+networks:
+   springappnetwork:
+     driver: bridge 
