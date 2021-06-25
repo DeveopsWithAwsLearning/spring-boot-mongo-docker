@@ -15,7 +15,7 @@ spec:
       imagePullSecrets:
       - name: dockerreposecret
       containers:
-      - image: 13.232.5.127:8085/springbootmongodocker
+      - image: 13.232.5.127:8085/springbootmongodocker:${buildNumber}
         name: springboot
         ports:
         - name: springboot
